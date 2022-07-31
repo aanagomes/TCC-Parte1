@@ -1,0 +1,437 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- META DATA -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
+		<!--Formulário-->
+
+		
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+		
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+		
+        <!-- TITLE OF SITE -->
+        <title>AGEH - Banco de Currículos</title>
+
+
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link href="assets/css/bootsnav.css" rel="stylesheet"/>	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+
+    </head>
+	
+	<body>
+
+		<!--menu start-->
+		<section id="menu">
+			<div class="container">
+				<div class="menubar">
+					<nav class="navbar navbar-default">
+					
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div><!--/.navbar-header -->
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<img class="imglogo" src="assets/images/logo/logo1.png"/>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="active"><a href="index.html">Página Inicial</a></li>
+								<li><a href="mvv.html">Mulheres vítimas de violência</a></li>
+								<li><a href="lgbt.html">LGBTQIAP+</a></li>
+								<li><a href="rua.html">Pessoas em situação de rua</a></li>
+								<li><a href="banco.html">Banco de currículo</a></li>
+								<li><a href="sobre.html">Sobre</a></li>
+								<!--<li>
+									<a href="doacao.html">
+										<span class="lnr lnr-cart"></span>
+									</a>
+								</li>
+								<li class="search">
+									<form action="">
+										<input type="text" name="search" placeholder="Search....">
+										<a href="#">
+											<span class="lnr lnr-magnifier"></span>
+										</a>
+									</form>
+								</li>-->
+							</ul><!-- / ul -->
+						</div><!-- /.navbar-collapse -->
+					</nav><!--/nav -->
+				</div><!--/.menubar -->
+			</div><!-- /.container -->
+
+		</section><!--/#menu-->
+		<!--menu end-->
+		
+
+
+		<!--about-part start-->
+
+		</section>
+		</section>
+		
+		<!-- Formulário inicio--><br><br>
+
+		<center>
+			<h3>Ficha de Inscrição no Programa Emegencial de Auxilio Desemprego <br>
+			Banco de Currículos <br></h3>
+		</center><hr>
+
+		<form class="needs-validation" name="curriculo" action="arquivo.php" method="POST">
+		
+			<h4>Dados Pessoais <br><br></h4>
+			
+			<div class="form-row">
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom01">Nome</label>
+					<input type="text" class="form-control" name="nome" placeholder="Nome" required>
+				</div>
+			
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom02">Data Nascimento</label>
+					<input type="date" class="form-control" name="dt_nasc" placeholder="Data de Nascimento" required>
+				</div>
+
+				  <div class="form-group">
+					<div class="col-xs-2">
+					<label for="sexo">Sexo</label>
+					<select class="form-control" name="sexo">
+						<option value="">Sexo</option>
+						<option value="feminino">Feminino</option>
+						<option value="masculino">Masculino</option>
+						<option value="outros">Outros</option>
+					</select>
+					</div>
+				  </div>
+			</div><br><br><br>
+	
+	
+			<div class="form-row">
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom01">CPF</label>
+					<input type="text" class="form-control" placeholder="CPF" name="cpf" required>
+				</div>
+	
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom03">RG</label>
+					<input type="text" class="form-control" placeholder="RG" name="rg" required>
+				</div>
+	
+				<div class="form-group">
+					<div class="col-xs-3">
+						<label for="estado_civil">Estado Civil</label>
+						<select class="form-control" id="estado_civil" name="estado_civil" required>
+							<option value="">Esolha uma das opções</option>
+							<option value="solteiro(a)">Solteiro(a)</option>
+							<option value="casado(a)">Casado(a)</option>
+							<option value="divorciad0(a)">Divorciado(a)</option>
+						</select>
+					</div>
+				</div>
+		
+			</div><br><br><br><br>
+	
+			<div class="form-row">
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom03">Telefone para Contato</label>
+					<input type="text" class="form-control" name="telefone" placeholder="Telefone para Contato"
+						required>
+				</div>
+	
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom03">Telefone para Recado</label>
+					<input type="text" class="form-control" name="telefone_2" placeholder="Telefone para Recado"
+						required>
+				</div>
+			</div><br><br><br><br>
+	
+	
+			<div class="form-row">
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom01">Endereço</label>
+					<input type="text" class="form-control" name="endereco" placeholder="Rua" value=""
+						required>
+				</div>
+	
+				<div class="col-md-1 mb-3">
+					<label for="validationCustom03">Número</label>
+					<input type="text" class="form-control" name="numero" placeholder="Nº" required>
+				</div>
+	
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom03">Bairro</label>
+					<input type="text" class="form-control" name="bairro" placeholder="Bairro" required>
+				</div>
+			</div><br><br><br><br>
+	
+			<div class="form-row">
+				<div class="col-md-3 mb-3">
+					<label for="validationCustom01">Ponto de Referência</label>
+					<input type="text" class="form-control" name="ponto_ref" placeholder="Ponto de Referência" required>
+				</div>
+	
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom01">Cidade</label>
+					<input type="text" class="form-control" name="cidade" placeholder="Cidade" required>
+				</div>
+	
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom03">CEP</label>
+					<input type="text" class="form-control" name="cep" placeholder="CEP" required>
+				</div>
+			</div><br><br><br><br>
+	
+			<div class="form-row">
+				<div class="col-md-3 mb-3">
+					<label for="validationCustom01">Tempo de residência no município</label>
+					<input type="text" class="form-control" placeholder="Tempo de Residência" name="tempo_resi" required>
+				</div>
+	
+				<div class="form-group">
+					<div class="col-xs-3">
+						<label for="tipo">Tipo de Residência</label>
+						<select class="form-control" id="tipo" name="tipo" required>
+							<option value="">Esolha uma das opções</option>
+							<option value="propria">Própria</option>
+							<option value="cedida">Cedida</option>
+							<option value="alugada">Alugada</option>
+						</select>
+					</div>
+				</div>
+	
+				<div class="col-md-2 mb-3">
+					<label for="validationCustom03">Valor(R$)</label>
+					<input type="text" class="form-control" placeholder="Valor(R$)" name="preco" required>
+				</div>
+			</div>
+			<br><br><br><br>	
+		<hr>	
+		
+	
+		<h4>Dependentes </h4><br>
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<label for="validationCustom01">Nome</label>
+				<input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+			</div>
+	
+			<div class="col-md-1 mb-3">
+				<label for="validationCustom01">Idade</label>
+				<input type="text" class="form-control" name="idaded" placeholder="Idade" required>
+			</div>
+	
+			<div class="col-md-2 mb-3">
+				<label for="validationCustom01">Parentesco</label>
+				<input type="text" class="form-control" name="parentescod" placeholder="Parentesco" required>
+			</div>
+		</div><br><br><br><br>	
+	
+		<div class="form-row">    
+			<div class="col-md-3 mb-3">
+				<label for="validationCustom02">Profissão</label>
+				<input type="text" class="form-control" name="profissaod" placeholder="Profissão" required>
+			</div>
+			<div class="col-md-2 mb-3">
+				<label for="validationCustom02">Salário(R$)</label>
+				<input type="text" class="form-control" name="salariod" placeholder="Salário" required>
+			</div>
+		</div><br><br><br><br>
+	
+		<button class="btn btn-primary" type="submit">Enviar</button>
+	
+		</form>
+
+
+		<!-- Formulário fim-->
+
+<br>
+<br>
+<br>
+
+		</section><!-- /.new-project-->	
+		<!-- new-project end -->
+		
+		<!-- new-project start -->
+		<!--hm-footer start-->
+		<section class="hm-footer">
+			<div class="container">
+				<div class="hm-footer-details">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title ">
+									<div class="logo">
+										<a href="index.html">
+											<img src="assets/images/logo/logo.png" alt="logo" />
+										</a>
+									</div><!-- /.logo-->
+								</div><!--/.hm-foot-title-->
+								<div class="hm-foot-para">
+									<p>
+										Hoje em dia é muito comum ver pessoas em situação de vulnerabilidade, por isso a AGEH está aqui para te ajudar! 
+									</p>
+								</div><!--/.hm-foot-para-->
+								
+							</div><!--/.hm-footer-widget-->
+						</div><!--/.col-->
+						<div class=" col-md-2 col-sm-6 col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4>Páginas</h4>
+								</div><!--/.hm-foot-title-->
+								<div class="footer-menu ">	  
+									<ul class="">
+										<li><a href="index.html" >Início</a></li>
+										<li><a href="mvv.html">Mulheres vítimas de violência</a></li>
+										<li><a href="lgbt.html">LGBTQIAP+</a></li>
+										<li><a href="rua.html">Pessoas em situação de rua</a></li>
+										<li><a href="banco.html">Banco de Currículo</a></li>
+										<li><a href="sobre.html">Sobre</a></li> 
+									</ul>
+								</div><!-- /.footer-menu-->
+							</div><!--/.hm-footer-widget-->
+						</div><!--/.col-->
+						<div class=" col-md-3 col-sm-6 col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4>Redes Sociais</h4>
+								</div><!--/.hm-foot-title-->
+								<div class="hm-foot-icon">
+									<ul>
+										<li><a href="https://pt-br.facebook.com/EtecRegistro/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li><!--/li-->
+										<li><a href="https://www.instagram.com/etecregistro/"><img class="icone" src="assets/images/blog/insta.png" aria-hidden="true"></i></a></li><!--/li-->
+									</ul><!--/ul-->
+								</div><!--/.hm-foot-icon-->
+							</div><!--/.hm-footer-widget-->
+						</div><!--/.col-->
+						<div class=" col-md-3 col-sm-6  col-xs-12">
+							<div class="hm-footer-widget">
+								<div class="hm-foot-title">
+									<h4>FALE CONOSCO</h4>
+								</div><!--/.hm-foot-title-->
+								<div class="hm-foot-para">
+									<p class="para-news">
+										Entre em contato com a AGEH: <br>
+										Logo que possível responderemos!
+									</p>
+								</div><!--/.hm-foot-para-->
+								<div class="hm-foot-email">
+									<div class="foot-email-box">
+										<input type="text" class="form-control" placeholder="Email">
+									</div><!--/.foot-email-box-->
+									<div class="foot-email-subscribe">
+										<button type="button" >Enviar</button>
+									</div><!--/.foot-email-icon-->
+								</div><!--/.hm-foot-email-->
+							</div><!--/.hm-footer-widget-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.hm-footer-details-->
+			</div><!--/.container-->
+
+		</section><!--/.hm-footer-details-->
+		<!--hm-footer end-->
+		
+		<!-- footer-copyright start -->
+		<footer class="footer-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="foot-copyright pull-left">
+							<!--<p>
+								&copy; All Rights Reserved. Designed and Developed by
+							 	<a href="https://www.themesine.com">ThemeSINE</a>
+							</p>-->
+						</div><!--/.foot-copyright-->
+					</div><!--/.col-->
+					<!--<div class="col-sm-5">
+						<div class="foot-menu pull-right
+						">	  
+							<ul>
+								<li ><a href="#">legal</a></li>
+								<li ><a href="#">sitemap</a></li>
+								<li ><a href="#">privacy policy</a></li>
+							</ul>-->
+						</div><!-- /.foot-menu-->
+					</div><!--/.col-->
+				</div><!--/.row-->
+				<div id="scroll-Top">
+					<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div><!--/.scroll-Top-->
+			</div><!-- /.container-->
+
+		</footer><!-- /.footer-copyright-->
+		<!-- footer-copyright end -->
+
+
+
+		<!-- jaquery link -->
+
+		<script src="assets/js/jquery.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        
+        <!--modernizr.min.js-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		
+		<!--bootstrap.min.js-->
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+		
+		<!-- for manu -->
+		<script src="assets/js/jquery.hc-sticky.min.js" type="text/javascript"></script>
+
+		
+		<!-- vedio player js -->
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		
+		<!--owl.carousel.js-->
+        <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+
+		<!-- counter js -->
+		<script src="assets/js/jquery.counterup.min.js"></script>
+		<script src="assets/js/waypoints.min.js"></script>
+
+		
+        
+        <!--Custom JS-->
+        <script type="text/javascript" src="assets/js/jak-menusearch.js"></script>
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+		
+
+    </body>
+	
+</html>
