@@ -1,0 +1,516 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        
+        <title>Snippet - BBBootstrap</title>
+        
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+        <link href='#' rel='stylesheet'>
+                                
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                
+        <style>
+            ::-webkit-scrollbar {
+                width: 10px;
+                }
+            /* Track */
+               ::-webkit-scrollbar-track {
+                background: #f1f1f1; 
+                }
+                                 
+            /* Handle */
+               ::-webkit-scrollbar-thumb {
+                background: #888; 
+                }
+                                
+            /* Handle on hover */
+               ::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+                } 
+                
+            body{background-color: #eee}.form-control:focus{color: #495057;background-color: #fff;border-color: #80bdff;outline: 0;box-shadow: 0 0 0 0rem rgba(0,123,255,.25)}.btn-secondary:focus{box-shadow: 0 0 0 0rem rgba(108,117,125,.5)}.close:focus{box-shadow: 0 0 0 0rem rgba(108,117,125,.5)}.mt-200{margin-top:200px}
+            
+        </style>
+    </head>                             
+    
+    <body className='snippet-body'>
+        <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_arrows.min.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
+ 
+        <div class="container">
+                
+            <!-- Modal -->
+            <div class="row d-flex justify-content-center mt-200"> 
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Preencha o currículo aqui </button> 
+            </div>
+        
+            <form name="curriculo" action="arquivo.php" method="POST">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Banco de Currículos</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="smartwizard">
+                                    <ul>
+                                        <li><a href="#step-1">Etapa 1<br /><small>Dados Pessoais</small></a></li>
+                                        <li><a href="#step-2">Etapa 2<br /><small>Critérios Familiares</small></a></li>
+                                        <li><a href="#step-3">Etapa 3<br /><small>Histórico</small></a></li>
+                                        <li><a href="#step-4">Etapa 4<br /><small>Escolaridade</small></a></li>
+                                        <li><a href="#step-5">Etapa 5<br /><small>Experiência</small></a></li>
+                                        <li><a href="#step-6">Etapa 6<br /><small>Critérios Finais</small></a></li>
+                                    </ul>
+
+                                  
+                                    <div class="mt-4">
+                                        <!--Primeiro passo-->
+                                        <div id="step-1">
+                                            <div class="row">
+                                                <div class="col-md-6"> 
+                                                    <label for="nome">Nome</label>
+                                                    <input type="text" class="form-control" name="nome" placeholder="Nome" id="nome" required>
+                                                </div>
+                                                <div class="col-md-3"> 
+                                                    <label for="dtnasc">Data de Nascimento</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Nascimento" id="dtnasc" required> 
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-2">
+                                                    <label for="sexo">Sexo</label>
+                                                    <select class="form-control" name="sexo" id="sexo" required>
+                                                        <option value="">Sexo</option>
+                                                        <option value="Feminino">Feminino</option>
+                                                        <option value="Masculino">Masculino</option>
+                                                        <option value="Outros">Outros</option>
+                                                    </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-3">
+                                                    <label for="cpf">CPF</label>
+                                                    <input type="text" class="form-control" placeholder="CPF" name="cpf" id="cpf" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="rg">RG</label>
+                                                    <input type="text" class="form-control" placeholder="RG" name="rg" id="rg" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-6">
+                                                        <label for="estado_civil">Estado Civil</label>
+                                                        <select class="form-control" name="estado_civil" id="estado_civil" required>
+                                                            <option value="">Escolha uma das opções</option>
+                                                            <option value="solteiro(a)">Solteiro(a)</option>
+                                                            <option value="casado(a)">Casado(a)</option>
+                                                            <option value="divorciad0(a)">Divorciado(a)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-2">
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom03">Possui algum tipo de deficiência?</label><br>
+                                                    <input type="radio" name="pcd" id="simpcd" value="Sim">
+                                                    <label class="form-check-label" for="simpcd"> Sim </label><br>
+                                                    <input type="radio" name="pcd" id="naopcd" value="Não">
+                                                    <label class="form-check-label" for="naopcd"> Não </label>
+                                                </div>        
+                                                <div class="col-md-4">
+                                                    <label for="validationCustom03">Especifique</label>
+                                                    <input type="text" class="form-control" placeholder="Especifique" name="pcd_info" required>
+                                                </div>                                         
+                                            </div>
+                                            <div class="row mt-2">
+                                                
+                                            </div>
+
+
+                                            <div class="row mt-2">
+                                                <div class="col-md-3">
+                                                    <label for="telefone">Telefone para Contato</label>
+                                                    <input type="text" class="form-control" name="telefone" placeholder="(XX)XXXXX-XXXX" id="telefone" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="telefone_2">Telefone para Recado</label>
+                                                    <input type="text" class="form-control" name="telefone_2" placeholder="(XX)XXXXX-XXXX" id="telefone_2" required>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-6">
+                                                    <label for="endereco">Endereço</label>
+                                                    <input type="text" class="form-control" name="endereco" placeholder="Rua" id="endereco" required>
+                                                </div>
+                                    
+                                                <div class="col-md-2">
+                                                    <label for="num">Nº</label>
+                                                    <input type="text" class="form-control" name="numero" placeholder="Nº" id="num" required>
+                                                </div>
+                                    
+                                                <div class="col-md-3">
+                                                    <label for="bairro">Bairro</label>
+                                                    <input type="text" class="form-control" name="bairro" placeholder="Bairro" id="bairro" required>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-4">
+                                                    <label for="ponto">Ponto de Referência</label>
+                                                    <input type="text" class="form-control" name="ponto_ref" placeholder="Ponto de Referência" id="ponto" required>
+                                                </div>
+                                    
+                                                <div class="col-md-3">
+                                                    <label for="cidade">Cidade</label>
+                                                    <input type="text" class="form-control" name="cidade" placeholder="Cidade" id="cidade" required>
+                                                </div>
+                                    
+                                                <div class="col-md-3">
+                                                    <label for="cep">CEP</label>
+                                                    <input type="text" class="form-control" name="cep" placeholder="CEP" id="cep" required>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-5">
+                                                    <label for="temporesi">Tempo de residência no município</label>
+                                                    <input type="text" class="form-control" placeholder="Tempo de Residência" name="tempo_resi" id="temporesi" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-3">
+                                                        <label for="tipo">Tipo de Residência</label>
+                                                        <select class="form-control" id="tipo" name="tipo" required>
+                                                            <option value="">Escolha uma das opções</option>
+                                                            <option value="propria">Própria</option>
+                                                            <option value="cedida">Cedida</option>
+                                                            <option value="alugada">Alugada</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="preco">Valor(R$)</label>
+                                                    <input type="text" class="form-control" placeholder="Valor(R$)" name="preco" id="preco" required>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom03">Possui CAD Único?</label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="cadsim">
+                                                    <label class="form-check-label" for="cadsim"> Sim </label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="cadnao">
+                                                    <label class="form-check-label" for="cadnao"> Não </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="cad">Número</label>
+                                                    <input type="text" class="form-control" placeholder="Número" name="cad" id="cad" required>
+                                                </div>                                                 
+                                            </div><br>
+                                            <label for="validationCustom02"><h4>Beneficíos</h4></label>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-3">
+                                                    
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Bolsa familia" id="bolsafamilia">
+                                                        <label for="bolsafamilia"> Bolsa familia </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Renda Cidadã" id="rendacidada">
+                                                        <label for="rendacidada"> Renda Cidadã </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="BPC" id="bpc">
+                                                        <label for="bpc"> BPC </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Aposentadoria" id="aposentadoria">
+                                                        <label for="aposentadoria"> Aposentadoria </label><br>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3"> 
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Pensão" id="pensao">
+                                                        <label for="pensao"> Pensão </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Nenhum" id="nenhum">
+                                                        <label for="nenhum"> Nenhum </label><br>
+
+                                                        <input class="form-check-input" type="checkbox" value="Outros" id="outros">
+                                                        <label for="outros"> Outros </label><br>
+
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3"> 
+                                                <label for="valorbene">Valor(R$)</label>
+                                                <input type="text" class="form-control" placeholder="Valor(R$)" name="preco" id="valorbene" required>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    <!--
+                                        Segundo passo--
+                                        <div id="step-2">
+                                            <label for="validationCustom02"><h4>Dependentes</h4></label>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6">
+                                                    <label for="validationCustom01">Nome</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <label for="validationCustom01">Idade</label>
+                                                    <input type="text" class="form-control" name="idaded" placeholder="Idade" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Parentesco</label>
+                                                    <input type="text" class="form-control" name="parentescod" placeholder="Parentesco" required>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label for="validationCustom02">Profissão</label>
+                                                    <input type="text" class="form-control" name="profissaod" placeholder="Profissão" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom02">Salário(R$)</label>
+                                                    <input type="text" class="form-control" name="salariod" placeholder="Salário" required>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row mt-3">
+                                                <div class="col-md-10">
+                                                    <label for="validationCustom02"><h4>Critérios</h4></label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Familia constituída - 02 filhos menores" id="familiaconstituida">
+                                                        <label for="defaultCheck1"> Familia constituída - 02 filhos menores </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Todos desempregados" id="todosdesempregados">
+                                                        <label for="defaultCheck1"> Todos desempregados </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Todos os filhos matriculados" id="todosfilhosmatriculados">
+                                                        <label for="defaultCheck1"> Todos os filhos matriculados </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Apenas um inscrito na familia" id="uminscritofamilia">
+                                                        <label for="defaultCheck1"> Apenas um inscrito na familia </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Desempregado há mais de 1 ano" id="dempregadoumano">
+                                                        <label for="defaultCheck1"> Desempregado há mais de 1 ano </label><br>
+                                        
+                                                        <input class="form-check-input" type="checkbox" value="Residente no município há mais de 2 anos" id="desempregadodoisanos">
+                                                        <label for="defaultCheck1"> Residente no município há mais de 2 anos </label><br>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <--Terceiro passo--
+                                        <div id="step-3" class="">
+                                            <label for="validationCustom02"><h4>Emprego</h4></label>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label for="validationCustom03">Tempo desempregado(a)</label>
+                                                    <input type="text" class="form-control" placeholder="Tempo em meses" name="cad" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom03">Última função exercida</label>
+                                                    <input type="text" class="form-control" placeholder="Número" name="cad" required>
+                                                </div>
+                                            </div><br>
+                                            <label for="validationCustom02"><h4>Frente de Trabalho</h4></label>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label for="validationCustom03">Já participou do programa?</label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1"> Sim </label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2"> Não </label>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom03">Quando</label>
+                                                    <input type="text" class="form-control" placeholder="Número" name="cad" required>
+                                                </div>      
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom03">Local</label>
+                                                    <input type="text" class="form-control" placeholder="Número" name="cad" required>
+                                                </div>                                             
+                                            </div>
+                                            <div class="row mt-2">
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom03">Motivo de saída</label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1"> Término do período </label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2"> Dispensado </label><br>
+                                                    <input type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2"> Solicitou dispensa </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <--Quarto passo--
+                                        <div id="step-4" class="">
+                                            <label for="validationCustom02"><h4>Escolaridade</h4></label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="validationCustom01">Instituição</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom01">Grau</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Inicio</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Inicio" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Conclusão</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Conclusão" required>
+                                                </div>
+                                            </div><br>
+                                            <label for="validationCustom02"><h4>Cursos</h4></label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="validationCustom01">Instituição</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom01">Curso</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <--Quinto passo--
+                                        <div id="step-5" class="">
+                                            <label for="validationCustom02"><h4>Experiência</h4></label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="validationCustom01">Empresa</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom01">Cargo</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom01">Descrição das atividades</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Data de Entrada</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Inicio" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Data de Saída</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Conclusão" required>
+                                                </div>   
+                                            </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="validationCustom01">Empresa</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom01">Cargo</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="validationCustom01">Descrição das atividades</label>
+                                                    <input type="text" class="form-control" name="nomedepen" placeholder="Nome" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Data de Entrada</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Inicio" required>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="validationCustom01">Data de Saída</label>
+                                                    <input type="date" class="form-control" name="dt_nasc" placeholder="Data de Conclusão" required>
+                                                </div>   
+                                            </div>
+                                        </div>
+                                        <--Sexto passo--
+                                        <div id="step-6">
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <label for="validationCustom02"><h4>Áreas de interrese</h4></label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="Familia constituída - 02 filhos menores" id="familiaconstituida">
+                                                        <label for="defaultCheck1"> Limpeza de ruas </label><br>
+                                    
+                                                        <input class="form-check-input" type="checkbox" value="Todos desempregados" id="todosdesempregados">
+                                                        <label for="defaultCheck1"> Oficina </label><br>
+                                    
+                                                        <input class="form-check-input" type="checkbox" value="Todos os filhos matriculados" id="todosfilhosmatriculados">
+                                                        <label for="defaultCheck1"> Carpinagem Manual </label><br>
+                                    
+                                                        <input class="form-check-input" type="checkbox" value="Apenas um inscrito na familia" id="uminscritofamilia">
+                                                        <label for="defaultCheck1"> Carpinagem Máquina </label><br>
+                                    
+                                                        <input class="form-check-input" type="checkbox" value="Desempregado há mais de 1 ano" id="dempregadoumano">
+                                                        <label for="defaultCheck1"> Departamentos </label><br>
+                                    
+                                                        <input class="form-check-input" type="checkbox" value="Residente no município há mais de 2 anos" id="desempregadodoisanos">
+                                                        <label for="defaultCheck1"> Indiferente </label><br>
+                                                    </div>
+                                                </div>
+                                            </div><hr>
+                                            <div class="row">
+                                                <div class="col-md-10">
+                                                    <label for="validationCustom02"><h4>Áreas de interrese</h4></label>
+                                                    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    -->
+                                    </div>
+                                  
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+                
+            </form>
+        </div>
+
+        
+
+        <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script>
+            
+        <script type='text/javascript'>
+            
+            $(document).ready(function(){
+
+                $('#smartwizard').smartWizard({
+                    selected: 0,
+                    theme: 'arrows',
+                    autoAdjustHeight:true,
+                    transitionEffect:'fade',
+                    showStepURLhash: false,
+                });
+            });
+        </script>
+                               
+        <script type='text/javascript'>
+            
+            var myLink = document.querySelector('a[href="#"]');
+            myLink.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        </script>     
+
+    </body>
+</html>
