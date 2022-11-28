@@ -1,2 +1,2 @@
-# TCC-Parte1
-Esse é o nosso tcc com a parte 1 pronta para apresentação
+# TCC-PartedoBanco
+Esse é o nosso tcc com a parte do Banco pronta para apresentação
